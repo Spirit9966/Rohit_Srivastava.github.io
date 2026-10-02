@@ -16,7 +16,7 @@ Plain HTML/CSS/JS. There is no build step, so it runs on any static host (GitHub
 
 ## Before going live
 
-1. In `products.js`, fill in `SHOP.whatsapp` (digits with country code, e.g. `919876543210`), `instagram` and `email`.
+1. In `products.js`, fill in `SHOP.whatsapp` (digits with country code, e.g. `919876543210`) and the profile URLs in `SHOP.social`. Empty links are hidden.
 2. Check the colour names that look different in the photos:
    - **Cotton Silk with Boota Zari**: the lookbook says "Black", but the photo is coral pink. The site currently says "Coral Pink".
    - **Malai Silk Palm Motif, "Rama Green"**: the photo looks navy blue.

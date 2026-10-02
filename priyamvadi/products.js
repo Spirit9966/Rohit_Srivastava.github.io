@@ -14,8 +14,14 @@ const SHOP = {
   // WhatsApp number with country code, digits only (e.g. "919876543210").
   // Leave empty until you have it — buttons will then open WhatsApp without a recipient.
   whatsapp: "",
-  instagram: "", // handle without the @, e.g. "priyamvadi.sarees"
-  email: "",
+  email: "Ayushi@priyamvadi.in",
+  // Full profile URLs. Leave any empty to hide that link.
+  social: {
+    Instagram: "",
+    Facebook: "",
+    YouTube: "",
+    Pinterest: "",
+  },
   city: "Varanasi",
 };
 

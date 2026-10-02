@@ -167,13 +167,14 @@
   // ---------- Contact ----------
   document.querySelectorAll(".js-wa").forEach((a) => (a.href = waLink(a.dataset.msg)));
   const actions = $("#contact-actions");
-  if (SHOP.instagram) {
-    actions.append(el("a", { class: "btn btn-outline", href: `https://instagram.com/${SHOP.instagram}`,
-      target: "_blank", rel: "noopener", text: "Instagram" }));
-  }
   if (SHOP.email) {
     actions.append(el("a", { class: "btn btn-outline", href: `mailto:${SHOP.email}`, text: "Email us" }));
+    $("#contact-email").append(el("a", { href: `mailto:${SHOP.email}`, text: SHOP.email }));
   }
+  const socials = Object.entries(SHOP.social || {}).filter(([, url]) => url);
+  $("#social").replaceChildren(
+    ...socials.map(([name, url]) => el("a", { href: url, target: "_blank", rel: "noopener", text: name }))
+  );
   $("#year").textContent = new Date().getFullYear();
 
   renderChips();
